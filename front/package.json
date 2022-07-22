@@ -1,0 +1,21 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "author": "logicoffee",
+  "license": "MIT",
+  "scripts": {
+    "dev": "spago build && yarn parcel public/index.html"
+  },
+  "dependencies": {
+    "@material/button": "^14.0.0",
+    "@material/card": "^14.0.0",
+    "@material/layout-grid": "^14.0.0",
+    "@material/textfield": "^14.0.0",
+    "@material/typography": "^14.0.0",
+    "parcel": "^2.6.2",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.6.2"
+  }
+}

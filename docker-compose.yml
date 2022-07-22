@@ -1,0 +1,30 @@
+services:
+  app:
+    image: example:dev
+    build:
+      context: .
+      target: dev
+    ports:
+    - "8000:8000"
+    tty: true
+    volumes:
+    - ./server:/workdir
+    - stack-work:/workdir/.stack-work
+
+  front:
+    image: example:front
+    build:
+      context: .
+      target: front-dev
+    command: yarn dev
+    ports:
+    - "1234:1234"
+    volumes:
+    - ./front:/workdir
+    - node_modules:/workdir/node_modules
+    - spago:/workdir/.spago
+
+volumes:
+  stack-work:
+  node_modules:
+  spago:
